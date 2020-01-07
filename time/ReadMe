@@ -4,6 +4,11 @@ This few scripts can be used to create a small feature to get the time you
 spend on modifying files. The opening and closing time is written to a 
 sqlite3 database to save the periods the files where modified.
 
+To create the database use the CreateTime.sql. You can create the database with
+the following command.
+
+sqlite3 time.db < CreateTime.sql
+
 By adding the to scripts (timeadd.sh and timeaddclose.sh) to the opening or
 closing event of your editor (in this example for vim) you can quit easy read
 the used time with the timeusd.sh.
