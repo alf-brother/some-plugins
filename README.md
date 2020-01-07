@@ -1,2 +1,4 @@
 # some-plugins
-A addition to your system to get the time you used editing a certain file.
+# Used Time
+In the folder time you find some files to create your own little timekeeping 
+plugin for vim.
