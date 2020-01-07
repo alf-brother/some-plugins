@@ -1,0 +1,19 @@
+@author : r0fl
+
+This few scripts can be used to create a small feature to get the time you 
+spend on modifying files. The opening and closing time is written to a 
+sqlite3 database to save the periods the files where modified.
+
+By adding the to scripts (timeadd.sh and timeaddclose.sh) to the opening or
+closing event of your editor (in this example for vim) you can quit easy read
+the used time with the timeusd.sh.
+
+I added all the files into a hidden folder called .time on my home. After that
+you can add the following three lines to your .vimrc to implement the time 
+visualisation feature to your system.
+
+autocmd BufReadPre * silent !~/.time/timeadd.sh %
+autocmd BufNewFile * silent !~/.time/timeadd.sh %
+autocmd QuitPre * silent !~/.time/timeaddclose.sh %
+
+With ~/.time/timeused.sh FILENAME you get the time used to modify the file.
